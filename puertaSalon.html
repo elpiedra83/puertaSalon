@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puerta Salón | Universidad Católica del Uruguay</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" sizes="512x512"/>
+    <link rel="stylesheet" href="style/style.css" />
+    <link href="fonts/Oswald-Regular.ttf" rel="stylesheet">
+    <link href="fonts/OpenSansCondensed-Light.ttf" rel="stylesheet">
+    <script src="js/api.js" defer></script>
+    <script src="js/renderizar.js" defer></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"  defer></script>
+  </head>
+  <body>
+    <main>
+    <header>
+      <span class="iconify" data-icon="mdi:map-marker-right-outline" data-inline="false"></span>
+      <span id="numeroSalon"></span>
+      <div id="horaActual">
+        <span class="iconify" data-icon="mdi:clock-time-three-outline" data-inline="false" ></span>
+        <div id="reloj"></div>
+      </div>
+    </header>
+    <div class="content">
+      <div id="claseActual" class="clase claseActual">
+        <div id="horariosCA" class="horarios">
+          <span class="iconify icono" data-icon="mdi:clock-time-three-outline" data-inline="false" ></span>
+        <span id="horaComienzoCA" class="hora horaComienzo">
+        </span>
+          <span id="horaFinCA" class="hora horaFin">
+          </span>
+          <span id="iconoProxClase" class="iconify icono" data-icon="mdi:timer-outline" data-inline="false"></span>
+          <div id="tiempoProxClase" class="hora">
+            <div id="cuentaAtras" class="reloj"></div>
+          </div>
+        </div>
+        <div class="descripcion">
+        <span id="claseNombreCA" class="claseNombre"></span>
+      <span id="docentesCA" class="docentes">
+      </span>
+    </div>
+      </div>
+      <div id="claseSiguiente" class="clase claseSiguiente">
+        <div id="horariosCS" class="horarios">
+          <span  class="iconify icono" data-icon="mdi:clock-time-three-outline" data-inline="false" ></span>
+        <span id="horaComienzoCS" class="hora">
+          
+        </span>
+        <span id="horaFinCS" class="hora horaFin">
+        </span>
+      </div>
+      <div class="descripcion">
+        <span id="claseNombreCS" class="claseNombre">
+        </span>
+        <span id="docentesCS" class="docentes">
+        </span>
+      </div>
+      </div>
+     </div>
+    </div>
+  </main>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+    setSalon()
+    getData()
+    showCurrentTime();
+    })
+  </script>
+</html>
